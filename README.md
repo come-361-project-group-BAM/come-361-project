@@ -8,7 +8,10 @@ To run the system, simply execute the main Python file directly via the terminal
 `python3 main.py`
 
 ## Task Distribution
-- **Harun Görgün:** Set up the shared Git repository, prepared the `README.md`, designed the basic `Process` classes, and coded the Mini Demo (PoC) that reads data from the `input.txt` file into memory.
-- **Beyza Arda:** Will integrate the logical skeleton of the FCFS (First-Come, First-Served) and SJF (Shortest Job First) scheduling algorithms into the Python simulation by the next submission.
-- **Arda Çiçekli:** Will establish the structure for the Round Robin (RR) and Priority Scheduling algorithms and plan the time quantum management by the next submission.
-- **Mehmethan Ünlü:** Will determine the libraries (e.g., Matplotlib or Tkinter) for rendering the results on the interface (such as Gantt Chart visualization) and design the visual output format by the next submission.
+- **Harun Görgün:** Algorithm Design and Development: Responsible for coding the core logic (fcfs_schedule) of the First-Come, First-Served (FCFS) algorithm in the fcfs.py file. Handles the calculation of CPU idle times, process waiting times, and turnaround times.   
+
+- **Beyza Arda:** Data Models & Core Architecture: Responsible for creating the fundamental data structures in the process.py file. Designs the Process class (PID, arrival time, burst time, etc.) and the skeleton Scheduler class for future algorithms.   
+
+- **Arda Çiçekli:** System Integration & File I/O: Responsible for developing the main.py file that manages the main execution flow of the simulation. Handles parsing and reading process data from the input.txt file, performing missing file checks, and feeding the objects into the algorithm.   
+
+- **Mehmethan Ünlü:**  Visualization & Reporting: Responsible for designing the print_results function within fcfs.py. Handles printing the algorithm metrics to the console in a tabular format and generating the text-based Gantt Chart to visualize the execution timeline of the processes.   
