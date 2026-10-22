@@ -6,7 +6,7 @@ from fcfs import fcfs_schedule, print_results
 def main():
     process_list = []
     
-    # input.txt dosyasını okuma simülasyonu
+    # input.txt simülasyonu
     if not os.path.exists("input.txt"):
         print("Hata: input.txt dosyası bulunamadı!")
         return
@@ -23,7 +23,7 @@ def main():
                 p = Process(pid, arrival, burst)
                 process_list.append(p)
 
-    # Okunan verileri terminale yazdırma testi
+    # Okunan verileri yazdırma
     print("--- CPU Scheduling Visualizer: Mini Demo ---")
     print(f"Dosyadan okunan Process sayısı: {len(process_list)}")
     print("PID\tGeliş(Arrival)\tSüre(Burst)")
@@ -32,7 +32,7 @@ def main():
     for p in process_list:
         print(f"{p.pid}\t{p.arrival_time}\t\t{p.burst_time}")
 
-    # FCFS algoritmasını çalıştır ve sonuçları yazdır
+    # FCFS algoritmasının sonuçlarını yazdırma
     gantt = fcfs_schedule(process_list)
     print_results(process_list, gantt)
 
