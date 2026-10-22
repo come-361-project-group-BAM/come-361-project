@@ -5,16 +5,9 @@ from process import Process
 
 
 def fcfs_schedule(process_list):
-    """
-    FCFS algoritmasını çalıştırır.
+    
+    #FCFS algoritmasını çalıştırır.
 
-    Parametre:
-        process_list: Process nesnelerinden oluşan liste
-
-    Döndürür:
-        gantt: [(pid, başlangıç, bitiş), ...] şeklinde Gantt Chart verisi
-               (CPU'nun boş kaldığı aralıklar için pid = "IDLE")
-    """
     # Geliş zamanına göre sırala (eşitlikte PID sırası)
     processes = sorted(process_list, key=lambda p: (p.arrival_time, p.pid))
 
@@ -42,7 +35,7 @@ def fcfs_schedule(process_list):
 
 
 def print_results(process_list, gantt):
-    """Sonuç tablosunu, ortalamaları ve metin tabanlı Gantt Chart'ı yazdırır."""
+    #Sonuç tablosunu oluşturur.
     print("\n=== FCFS Sonuçları ===")
     print(f"{'PID':<6}{'Arrival':<10}{'Burst':<8}{'Waiting':<10}{'Turnaround':<12}")
     print("-" * 46)
@@ -59,7 +52,7 @@ def print_results(process_list, gantt):
         print(f"Ortalama Bekleme Süresi (Avg Waiting)   : {avg_wait:.2f}")
         print(f"Ortalama Dönüş Süresi (Avg Turnaround)  : {avg_tat:.2f}")
 
-    # Metin tabanlı Gantt Chart
+    # Gantt Chart
     print("\n=== Gantt Chart ===")
     bar = "|"
     timeline = ""
@@ -74,7 +67,7 @@ def print_results(process_list, gantt):
 
 
 def load_processes(filename="input.txt"):
-    """input.txt dosyasından (pid arrival burst) Process listesi okur."""
+    #Process listesi okur.
     processes = []
     with open(filename, "r") as file:
         for line in file:
